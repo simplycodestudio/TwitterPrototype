@@ -21,4 +21,4 @@ springdoc:
     path: /swagger-twitter.html
 
 server:
-  port: 8085
+  port: 8080
