@@ -1,4 +1,4 @@
-package org.lisiecki.hsbcchallenge.twitterprototype;
+package org.lisiecki.hsbcchallenge;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
