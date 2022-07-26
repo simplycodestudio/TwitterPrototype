@@ -19,6 +19,7 @@ class FollowingController {
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
     public void follow(@RequestBody FollowRequest followRequest) throws ApplicationException {
+        userService.follow(followRequest);
         log.debug("User {} has started following user {}", followRequest.getFollower(),followRequest.getFollowed());
     }
 }

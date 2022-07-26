@@ -22,6 +22,6 @@ class WallController {
     @ResponseStatus(HttpStatus.OK)
     public List<Tweet> getUserWall(@PathVariable("nickName") final String nickName) throws ApplicationException {
         log.debug("Getting wall for user {}", nickName);
-        return null;
+        return userService.getUserWithTweetsInReverseOrder(nickName);
     }
 }

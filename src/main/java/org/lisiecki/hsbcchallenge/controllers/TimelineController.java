@@ -20,6 +20,6 @@ class TimelineController {
     @GetMapping("/{nickName}/timeline")
     @ResponseStatus(HttpStatus.OK)
     public List<Tweet> getTimeline(@PathVariable("nickName") final String nickName) throws ApplicationException {
-        return null;
+        return userService.findTweetForFollowingUsersInReverseOrder(nickName);
     }
 }
