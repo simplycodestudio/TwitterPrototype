@@ -13,7 +13,6 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping()
 class WallController {
 
     private final UserService userService;

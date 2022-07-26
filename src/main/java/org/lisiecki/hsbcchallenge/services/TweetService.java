@@ -42,7 +42,7 @@ public class TweetService {
             throw new ApplicationException("User's tweet message is empty.");
         }
         if (message.length() > MAX_MESSAGE_LENGTH) {
-            throw new ApplicationException(String.format("%d characters exceeded.",MAX_MESSAGE_LENGTH));
+            throw new ApplicationException(String.format("%d characters exceeded.", MAX_MESSAGE_LENGTH));
         }
     }
 }

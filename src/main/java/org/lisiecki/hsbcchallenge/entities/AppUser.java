@@ -25,10 +25,8 @@ public class AppUser {
     private Long id;
     @NotNull
     private String nickName;
-    private String realName;
     @CreatedDate
     private LocalDateTime registrationTimestamp = LocalDateTime.now();
-
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.DETACH, mappedBy = "user")
     private Set<Tweet> tweets = new HashSet<>();
 
@@ -50,10 +48,6 @@ public class AppUser {
     }
     )
     private Set<AppUser> following = new HashSet<>();
-
-    public void addTweet(Tweet tweet) {
-        tweets.add(tweet);
-    }
 
     public void addFollower(AppUser follower) {
         followers.add(follower);
@@ -81,7 +75,6 @@ public class AppUser {
         return "User{" +
                 "id=" + id +
                 ", nickName='" + nickName + '\'' +
-                ", realName='" + realName + '\'' +
                 ", registrationTimestamp=" + registrationTimestamp +
                 ", tweets=" + tweets +
                 ", followers=" + followers +
